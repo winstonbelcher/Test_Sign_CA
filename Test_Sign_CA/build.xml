@@ -1,0 +1,65 @@
+<project name="HelloUniverse" basedir="." default="main">
+	  <presetdef name="javac">
+	    <javac includeantruntime="false" />
+	  </presetdef>
+	
+	<property name="ant.build.javac.source" value="1.8"/> 
+	<property name="ant.build.javac.target" value="1.8"/>
+	  <property name="javac.source" value="1.8"/>
+	  <property name="javac.target" value="1.8"/>
+	
+    <property name="src.dir"     value="src"/>
+
+    <property name="build.dir"   value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir"     value="${build.dir}/jar"/>
+
+    <property name="main-class"  value="oata.HelloUniverse"/>
+	<property environment="env" />
+    <property name="lib.dir"     value="lib"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <echo>Ant version: ${ant.version}</echo>
+    <echo>java version: ${ant.java.version}</echo>
+	
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <echo>Ant version: ${ant.version}</echo>
+        <echo>java version: ${ant.java.version}</echo>
+    	<echo>JAVA_HOME: ${env.JAVA_HOME}</echo>
+        <javac executable="${env.JAVA_HOME}\bin\javac.exe" srcdir="${src.dir}" debug="on" optimize="off" destdir="${classes.dir}" classpathref="classpath"/>
+    </target>
+	
+    <target name="run" depends="jar">
+
+    </target>
+
+
+    <echo>jar directory: ${jar.dir}</echo>
+    <echo>ant project name: ${ant.project.name}</echo>
+	
+	
+	<echo>Now erasing build directory:</echo>
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="clean-build" depends="clean,jar"/>
+
+    <target name="main" depends="clean,run"/>
+
+</project>

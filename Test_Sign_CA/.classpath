@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="contribs/JimMoore/|src/performance/java/|contribs/CekiGulcu/|contribs/Jamie Tsao/|src/main/javadoc/|contribs/ThomasFenner/|src/main/java/|tests/src/java/" kind="src" path="lib/apache-log4j-1.2.17"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/contribs/CekiGulcu"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/contribs/Jamie Tsao"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/contribs/JimMoore"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/contribs/ThomasFenner"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/src/main/java"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/src/main/javadoc"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/src/performance/java"/>
+	<classpathentry kind="src" path="lib/apache-log4j-1.2.17/tests/src/java"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/j3dcore.jar"/>
+	<classpathentry kind="lib" path="lib/j3dutils.jar"/>
+	<classpathentry kind="lib" path="lib/vecmath.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
