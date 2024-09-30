@@ -59,6 +59,7 @@ public class HelloUniverse extends JFrame {
     	//  asdd first random comment 2:49 pm July 8
     	//  add second ramndom comment 2:50 pm
         // create a Swing panel inside the JFrame
+
         JPanel p = new JPanel();
         p.setLayout( new BorderLayout() );
         p.setPreferredSize( new Dimension(500, 500) );
