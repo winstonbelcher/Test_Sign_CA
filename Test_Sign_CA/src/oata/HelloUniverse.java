@@ -51,7 +51,7 @@ import com.sun.j3d.utils.geometry.ColorCube;
 import javax.media.j3d.*;
 import javax.vecmath.*;
 
-
+//
 public class HelloUniverse extends JFrame {
 
 //	static Logger logger = Logger.getLogger(HelloUniverse.class);
